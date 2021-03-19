@@ -3,7 +3,7 @@ function resultHandler(res, code, data) {
   res.json(data);
 }
 
-function result (output, res) {
+export default function result (output, res) {
   switch (output.statusCode) {
     case 500: {
       console.error(output.statusMessage);
@@ -27,5 +27,3 @@ function result (output, res) {
     }
   }
 }
-
-module.exports = result
