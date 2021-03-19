@@ -17,22 +17,22 @@ function result (output, res) {
   }
   switch (output.statusCode) {
     case 500: {
-      error(output.statusMessage);
+      console.error(error(output.statusMessage));
       resultHandler(res, output.statusCode, output.data)
       break;
     }
     case 400: {
-      warn(output.statusMessage);
+      console.log(warn(output.statusMessage));
       resultHandler(res, output.statusCode, output.data)
       break;
     }
     case 404: {
-      warn(output.statusMessage);
+      console.log(warn(output.statusMessage));
       resultHandler(res, output.statusCode, output.data)
       break;
     }
     case 200: {
-      info(output.statusMessage);
+      console.log(info(output.statusMessage));
       resultHandler(res, output.statusCode, output.data)
       break;
     }
