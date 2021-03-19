@@ -3,7 +3,13 @@ function resultHandler(res, code, data) {
   res.json(data);
 }
 
-export default function result (output, res) {
+function result (output, res) {
+  if (output === undefined) {
+    return
+  }
+  if (res === undefined) {
+    return;
+  }
   switch (output.statusCode) {
     case 500: {
       console.error(output.statusMessage);
@@ -26,4 +32,8 @@ export default function result (output, res) {
       break;
     }
   }
+}
+
+exports.result = function (output, res) {
+  result(output, res);
 }
