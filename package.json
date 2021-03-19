@@ -1,6 +1,6 @@
 {
   "name": "@reiqu/result",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,8 @@
     "url": "https://github.com/Reiqu/result/issues"
   },
   "homepage": "https://github.com/Reiqu/result#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
