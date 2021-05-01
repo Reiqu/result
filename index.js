@@ -26,6 +26,11 @@ function result (output, res) {
       resultHandler(res, output.statusCode, output.data)
       break;
     }
+    case 403: {
+      console.log(warn(output.statusMessage));
+      resultHandler(res, output.statusCode, output.data);
+      break;
+    }
     case 404: {
       console.log(warn(output.statusMessage));
       resultHandler(res, output.statusCode, output.data)
